@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>THE DONUT HOLE</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="background-color:#f7f7f7;">
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+<h3 style="text-align:center;">At The Donut Hole, we are passionate about crafting delectable treats that delight the senses and warm the heart. As a premier bakery, we have dedicated ourselves to the art of creating irresistible cakes, mouthwatering donuts, and a wide array of bakery delights. Our journey began with a simple goal: to bring joy to every bite.
+
+  Each day, our talented team of bakers rises before the sun, mixing the finest ingredients with care and precision. We believe in the power of quality and freshness, and that belief is woven into every pastry we create. Whether it's a birthday celebration, a quiet morning coffee, or a special occasion, we take pride in being a part of life's sweet moments.
+  
+  Our commitment to excellence extends beyond our treats. We cherish the communities we serve and are dedicated to giving back. Sustainability and responsible sourcing are at the core of our values, ensuring that our delicious creations leave a positive impact on the world.
+  
+  Thank you for choosing The Donut Hole to be a part of your story. We invite you to savor the magic of our cakes, the temptation of our donuts, and the warmth of our bakery. Come, experience the sweetness of life with us.
+  
+  Indulge. Celebrate. Share. </h3>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+
+</html>

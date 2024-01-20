@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>THE DONUT HOLE</title>
+    <style media="screen">
+      body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #bdc3c7;  
+    background: -webkit-linear-gradient(to right, #344557, #86c2eb); 
+    background: linear-gradient(to bottom, #344557, #86c2eb);
+            }
+
+.box {
+    width: 100%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #ec6935;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.25s;
+    margin-top: 100px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #000000;
+    padding: 10px 10px;
+    width: 250px;
+    outline: none;
+    color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.box h1 {
+    color: rgb(37, 36, 36);
+    /* text-transform: uppercase; */
+    font-weight: 500
+}
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #000000;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.box input[type="submit"]:hover {
+    background: #000000
+}
+
+
+    </style>
+  </head>
+  <body>
+    {% include "ecom/navbar.html" %}
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <form class="box" method="post">
+                    {% csrf_token %}
+                    <h1>Admin Login</h1>
+                     {% render_field form.username class="form-control" placeholder="Username" autocomplete="off" %}
+                     {% render_field form.password class="form-control" placeholder="Password" %}
+                     <input type="submit" name="" value="Login">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+{% include "ecom/footer.html" %}
+  </body>
+</html>
